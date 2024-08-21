@@ -11,18 +11,21 @@ int main() {
 	std::cout << "Lab1" << std::endl;
 	for (int i = 0; i <=10; i++) {
 		sum+=i;
-		std::cout << sum << "\n";
+		std::cout << "Sum: "<<sum << "\n";
 	}
 
+
+
+	/////////////
 	int multiply = 10;
 	int64_t sumof10s = 1;
-	
+
 	std::cout << "\n\n\n\n\n";
 	std::cout << "Exercise_1" << std::endl;
 
 	for (int i = 0; i <= 5; i++) {
 		sumof10s *= pow(10, i);
-		std::cout << sumof10s << std::endl;
+		std::cout << "Product: "<<sumof10s << std::endl;
 
 	}
 
