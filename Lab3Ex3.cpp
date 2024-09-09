@@ -8,7 +8,7 @@ int main() {
 	std::ofstream output("output.txt"); //declaring the output file
 
 
-	if (file.is_open() && output.is_open()) {
+	while (file.is_open() && output.is_open()) {
 		int year; //had to put this in sope of this if bc if i didnt it'd be asking for it
 
 
