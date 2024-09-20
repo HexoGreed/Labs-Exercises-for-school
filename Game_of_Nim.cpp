@@ -104,12 +104,15 @@ int main()
 				}
 				else {
 					choice = rand() % legalaction + 1;
-					if (choice > legalaction) {
-						choice = legalaction;
-					}
+					
 				}
 
+
+				if (choice > legalaction) {
+					choice = legalaction;
+				}
 				std::cout << "computer takes " << choice << "\n\n";
+				
 				numMarbles -= choice;
 				turn = 1;
 
