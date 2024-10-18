@@ -1,7 +1,3 @@
-//============================================================================
-// Name        : Ivan Temesvari
-// This program will test the Message class functionality.
-//============================================================================
 
 #include "Message.h"
 #include <iostream>
