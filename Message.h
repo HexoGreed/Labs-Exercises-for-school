@@ -1,4 +1,4 @@
-//Ivan Temesvari
+//I Tem
 //March 12th, 2014
 //Lab 7
 
