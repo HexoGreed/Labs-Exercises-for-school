@@ -38,9 +38,20 @@ string convertDate(string dateOfBirth, vector<int>& years){
 	try {
 		// Check for valid year
 		int yearValue = stoi(year);
-		if (yearValue < 0 || yearValue > 2024) {
+		int currentyear = 2024;
+
+		//makes sure year is within 150 years and the length of year is 4
+		if (yearValue < currentyear-150 || yearValue > currentyear || year.length()!=4) {
 			throw invalidYear();
 		}
+
+
+		//checks for leap year.
+		if ((yearValue % 4 == 0 && yearValue % 100 != 0) || (yearValue % 400 == 0)) {
+			cout << "This is a leap year!" << endl;
+		}
+
+
 
 		// Check for valid month input
 		int monthValue = stoi(month);
@@ -70,21 +81,22 @@ string convertDate(string dateOfBirth, vector<int>& years){
 
 		// Find the appropriate suffix for the day
 		string daySuffix;
-		if (dayValue == 1 || dayValue == 21 || dayValue == 31) {
+		if (dayValue % 10 == 1 && dayValue % 10 != 11) {
 			daySuffix = "st";
 		}
-		else if (dayValue == 2 || dayValue == 22) {
+		else if (dayValue %10 == 2 && dayValue%10 != 12) {
 			daySuffix = "nd";
 		}
-		else if (dayValue == 3 || dayValue == 23) {
+		else if (dayValue % 10 == 3 && dayValue != 13) {
 			daySuffix = "rd";
 		}
 		else {
 			daySuffix = "th";
 		}
+		//the suffixes are firST, secoND, thiRD, fourTH.
 
 
-		convertedDate += monthString + " " + dayString + daySuffix + ", " + yearString;
+		convertedDate += monthString + " " + dayString + daySuffix + " " + yearString;
 
 
 
