@@ -1,9 +1,4 @@
-/*
- * CSC155_Final_Lab_Starter.cpp
- *
- *  Created on: Oct 6, 2020
- *      Author: Ivan
- */
+
 #include <iostream>
 #include <stdio.h>
 #include <ctime>
